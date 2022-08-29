@@ -1,0 +1,116 @@
+/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.heading {
+    text-align: center;
+    font-size:48px; 
+    font-weight: 900;
+    font-family: Arial;
+    line-height: 72px;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    padding: 20px 80px;
+}
+.product {
+    position: relative;
+    max-width: 380px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 12px;
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.18);
+}
+.product__title {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: left;
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+.product__descr {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 332px;
+}
+.product__description {
+    padding: 0 24px;
+    margin-bottom: 24px;
+}
+.image_box {
+    box-sizing: border-box;
+}
+.image_box img{
+    max-width: 100%;
+    border-radius: 12px 12px 0 0;   
+}
+.product__btn {
+    margin: 24px;
+    border: 1px solid rgba(66, 148, 15, 1);
+    border-radius: 12px;
+    background-color: #fff;
+    color:rgba(66, 148, 15, 1);
+    font-weight: 900;
+    font-family: Arial;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    padding: 8px 0;
+
+    margin-top: auto;
+}
+.product__btn:hover,
+.product__btn:focus {
+    background-color: rgba(66, 148, 15, 1);
+    color: #fff;
+}
+.product__btn:active {
+    background-color: rgba(31, 82, 0, 1);
+    color: #fff;
+}
+.product__btn:disabled {
+    background-color: rgba(78, 78, 78, 1);
+    color: #fff; 
+}
+.disabled.product__btn {
+    background-color: rgba(78, 78, 78, 1);
+    color: #fff;
+    border: 1px solid rgba(78, 78, 78, 1);
+}
+.product.product--new::after {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    content: "Новинка";
+    font-weight: 400;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    background-color:#fdcff3;
+    border-radius: 12px;
+    padding: 0 16px;
+}
+.product.product--last::before {
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 120px;
+    content: "Последний";
+    font-weight: 400;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    background-color:#ffcf56;
+    border-radius: 12px;
+    padding: 0 16px;
+}
